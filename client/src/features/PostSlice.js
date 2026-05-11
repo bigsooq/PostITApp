@@ -25,7 +25,7 @@ export const getPosts = createAsyncThunk("post/getPosts", async () => {
 
     try {
 
-        const response = await axios.get("http://localhost:3002/getPosts");
+        const response = await axios.get("http://postitapp-1-tvcq.onrender.com/getPosts");
 
         return response.data.posts;
 
@@ -45,7 +45,7 @@ export const delPost = createAsyncThunk("post/delPost", async (postid) => {
 
     try {
 
-        const response = await axios.delete(`http://localhost:3002/delPost/${postid}`);
+        const response = await axios.delete(`http://postitapp-1-tvcq.onrender.com/delPost/${postid}`);
 
         return response.data;
 
@@ -62,7 +62,7 @@ export const updPost = createAsyncThunk("post/updPost", async (pdata) => {
 
     try {
 
-        const response = await axios.put("http://localhost:3002/updPost",pdata);
+        const response = await axios.put("http://postitapp-1-tvcq.onrender.com/updPost",pdata);
 
         return response.data;
 
