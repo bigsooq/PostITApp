@@ -11,7 +11,7 @@ const initialState={
  
 export const addUser=createAsyncThunk("user/addUser",async(userData)=>{
     try{
-        const response=await axios.post("http://postitapp-1-tvcq.onrender/register",userData);
+        const response=await axios.post("http://postitapp-1-tvcq.onrender.com/register",userData);
         return response.data.message;
     }
     catch(error){
@@ -21,7 +21,7 @@ export const addUser=createAsyncThunk("user/addUser",async(userData)=>{
 
 export const login=createAsyncThunk("user/login",async(userData)=>{
     try{
-        const response=await axios.post("http://postitapp-1-tvcq.onrender/login",userData);
+        const response=await axios.post("http://postitapp-1-tvcq.onrender.com/login",userData);
         return response.data;
     }
     catch(error){
